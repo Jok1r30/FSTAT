@@ -23,6 +23,6 @@ public class Player {
         country = jsonObject.get("country").getAsString();
 
         avatar = jsonObject.get("avatar").getAsString();
-        avatar = jsonObject.get("cover_image").getAsString();
+        cover_image = jsonObject.get("cover_image").getAsString();
     }
 }

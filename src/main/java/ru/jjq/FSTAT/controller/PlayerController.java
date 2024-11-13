@@ -14,6 +14,8 @@ public class PlayerController {
     public String player(@PathVariable(name = "name") String name, Model model) {
         Player player = FaceitConnector.get().getPlayer(name);
         model.addAttribute("nickname", player.nickname);
+        model.addAttribute("avatar", player.avatar);
+        model.addAttribute("cover_image", player.cover_image);
         return "player";
     }
 
