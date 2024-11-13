@@ -2,15 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="charset=UTF-8" />
     <title>Main page</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#find-button').click(function(e) {
+                var inputvalue = $("#name").val();
+                window.location.replace("/player/" + inputvalue);
+            });
+        });
+    </script>
 </head>
 
 <body>
     <p>Напиши ник чювака которого хочешь посмотреть</p>
-    <form action="/player/" method="GET">
-        <input type="text" id="name" name="name" required>
-        <button type="submit">Йоу!"</button>
+
+    <form name="idform">
+        <input type="text" id="name" value="Введите ник">
+        <input type="button" id="find-button" value="Йоу!">
     </form>
 </body>
 </html>
